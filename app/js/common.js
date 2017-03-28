@@ -1,9 +1,10 @@
 $(function () {
 
-
     //Magnific Popup
+    var portfolioItem = $(".portfolio-item");
+
     portfolioItem.each(function (e) {
-        var th = $(this);
+        let th = $(this);
         th.attr('href', '#portfolio-img-' + e)
             .find('.portfolio-popup')
             .attr('id', 'portfolio-img-' + e);
@@ -13,8 +14,5 @@ $(function () {
         removalDelay: 300,
         type: 'inline'
     });
-
-
-
 
 });
