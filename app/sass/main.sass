@@ -4,58 +4,6 @@ $output-bourbon-deprecation-warnings: false !default
 @import vars
 @import settings
 
-.main-head
-  width: 100%
-  height: 100px
-  position: fixed
-  top: 0
-  left: 0
-  z-index: 80
-  background-color: $white
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .095)
-  padding: 8px 16px
-  overflow: hidden
-  box-sizing: border-box
-  .top-head
-    text-align: center
-
-aside
-  background-color: $white
-  width: 350px
-  position: fixed
-  top: 55px
-  left: 0
-  bottom: 0
-  z-index: 1
-  display: flex
-  justify-content: center
-  align-items: center
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23)
-
-.hamburger
-  background-color: transparent
-  border: 0
-  width: 40px
-  height: 40px
-  font-size: 30px
-  outline: none
-  color: #9f9f9f
-  cursor: pointer
-  border-radius: 50%
-  transition: all .3s ease-in-out
-  &:active
-    background-color: rgba(0, 0, 0, .1)
-
-.slide-transition
-  transition: all .3s cubic-bezier(.65, .05, .36, 1)
-
-.slide-enter, .slide-leave
-  left: -100%
-
-
-
-.training, .jobs
-  padding-left: 350px
 
 .heading
   text-align: center
@@ -78,16 +26,20 @@ aside
       display: block
       overflow: hidden
       cursor: pointer
+      font-family: 'Roboto Slab', serif
+      font-weight: bold
+      p
+        font-size: em(18px)
       img
         +mt(.5s)
         width: 450px
-        height: 300px
+        height: 306px
         object-fit: contain
         display: inline-block
       &:hover
         .portfolio-item-cont
           opacity: 1
-          transform: scale(.95)
+          transform: scale(1)
         img
           transform: scale(1.1)
       &-cont
@@ -100,6 +52,7 @@ aside
         height: 100%
         background-color: rgba($white, .75)
         text-align: center
+        box-sizing: border-box
         opacity: 0
         +mt(.5s)
         h3
@@ -114,9 +67,9 @@ aside
 
 
 .portfolio-popup
-  position: relative
+  position: fixed
   background-color: #fff
-  display: block
+  display: none
   max-width: 1000px
   margin: 0 auto 40px
   text-align: center
@@ -135,6 +88,8 @@ aside
       top: 11px
       font-size: 45px
       margin-right: 10px
+  &.active
+    display: block
 
 .s-contacts
   background-color: lighten($color, 20%)

@@ -27,7 +27,6 @@ gulp.task('scripts', function () {
         'app/libs/jquery/dist/jquery.min.js',
         'app/libs/jquery-migrate/jquery-migrate.min.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-        'app/libs/vue.js',
         'app/js/common.js' // Всегда в конце
     ])
         .pipe(concat('scripts.min.js'))
