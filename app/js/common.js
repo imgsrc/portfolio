@@ -4,7 +4,7 @@ $(function () {
     var portfolioItem = $(".portfolio-item");
 
     portfolioItem.each(function (e) {
-        let th = $(this);
+        var th = $(this);
         th.attr('href', '#portfolio-img-' + e)
             .find('.portfolio-popup')
             .attr('id', 'portfolio-img-' + e);
