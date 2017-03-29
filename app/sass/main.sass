@@ -4,6 +4,23 @@ $output-bourbon-deprecation-warnings: false !default
 @import vars
 @import settings
 
+.main-head
+  display: flex
+  flex-wrap: nowrap
+  justify-content: space-around
+  padding: 20px 60px
+  box-shadow: 0 5px 10px rgba($color, .4)
+  .mysite
+    a
+      font-size: em(20px)
+      font-family: 'Ubuntu', sans-serif
+
+.soc-icons
+  width: 250px
+  display: flex
+  justify-content: space-around
+  .fa
+    font-size: 35px
 
 .heading
   text-align: center
@@ -14,6 +31,7 @@ $output-bourbon-deprecation-warnings: false !default
   justify-content: space-around
 
 .s-works
+  padding: 0 30px
   h3
     margin-top: 50px
     margin-bottom: 25px
@@ -88,7 +106,9 @@ $output-bourbon-deprecation-warnings: false !default
       font-size: 45px
       margin-right: 10px
 
-.s-contacts
-  background-color: lighten($color, 20%)
-  color: $white
-  padding-top: 60px
+.main-foot
+  display: flex
+  flex-wrap: nowrap
+  justify-content: space-around
+  background-color: lighten($color, 10%)
+  padding: 20px 0 30px
