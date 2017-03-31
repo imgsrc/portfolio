@@ -1,8 +1,6 @@
 $(function () {
-
     //Magnific Popup
     var portfolioItem = $(".portfolio-item");
-
     portfolioItem.each(function (e) {
         var th = $(this);
         th.attr('href', '#portfolio-img-' + e)
